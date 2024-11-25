@@ -1,0 +1,4 @@
+- **Reference ⬇️**
+  - [Texture Svg](https://loading.io/pattern/)
+  - [Font Pong Game](https://www.dafont.com/pong-game.font)
+  - [Font Symtext](https://www.dafont.com/symtext.font?text=10)

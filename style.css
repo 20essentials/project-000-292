@@ -1,0 +1,111 @@
+@font-face {
+  font-family: 'Pong';
+  src: url('assets/Pong-Game.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Symtext';
+  src: url('assets/Symtext.ttf') format('truetype');
+  font-display: swap;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Pong, Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif,
+    system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue';
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: white transparent;
+}
+
+body {
+  height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+  background-image: url('assets/texture.svg');
+  background-size: 150px;
+  gap: 1rem;
+
+  @media (width <= 1111px) and (orientation: portrait) {
+    canvas {
+      transform: scale(0.7) rotate(0deg);
+    }
+    .bar-player1 {
+      transform: scale(0.7) rotate(90deg) translateX(950px);
+    }
+    .bar-player2 {
+      transform: scale(0.7) rotate(90deg) translateX(-950px);
+    }
+  }
+
+  @media (width <= 1111px) and (orientation: landscape) {
+    place-items: center;
+    flex-wrap: nowrap;
+    gap: 0rem;
+    canvas {
+      transform: scale(0.7);
+    }
+
+    .bar-player1 {
+      transform: scale(0.55) translateX(100px);
+    }
+
+    .bar-player2 {
+      transform: scale(0.55) translateX(-100px);
+    }
+  }
+}
+
+.bar {
+  width: 100px;
+  height: 480px;
+  background-color: red;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 999px;
+  padding-block: 1rem;
+  display: none;
+
+  @media (width <= 1111px) {
+    display: flex;
+  }
+
+  &.bar-player1 {
+    background-image: radial-gradient(circle, #04aa6d, #fff, #04aa6d);
+  }
+
+  &.bar-player2 {
+    background-image: radial-gradient(circle, #09f, #888, #09f);
+
+    &.nascosto {
+      visibility: hidden;
+    }
+  }
+
+  .item-bar {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    place-content: center;
+
+    img {
+      width: 80%;
+      height: 80%;
+      pointer-events: none;
+    }
+  }
+}

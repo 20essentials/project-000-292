@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pong &lt;-&gt; Atari</title>
+    <meta name="google" content="notranslate" />
+    <link rel="shortcut icon" href="assets/favicon.webp" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <aside class="bar bar-player1">
+      <div class="item-bar left-player-1">
+        <img src="assets/w.png" alt="w keycap" />
+      </div>
+      <div class="item-bar right-player-2">
+        <img src="assets/s.png" alt="s keycap" />
+      </div>
+    </aside>
+
+    <canvas></canvas>
+
+    <aside class="bar bar-player2">
+      <div class="item-bar left-player-1">
+        <img src="assets/arrow-up.png" alt="arrow up keycap" />
+      </div>
+      <div class="item-bar right-player-2">
+        <img src="assets/arrow-down.png" alt="arrow down keycap" />
+      </div>
+    </aside>
+    <img
+      draggable="false"
+      class="keyboard-arrows"
+      hidden
+      src="assets/keyboard-arrows-37kb.webp"
+      alt="Keyboard Arrows"
+    />
+    <img
+      draggable="false"
+      class="keyboard-letters"
+      hidden
+      src="assets/keyboard-letters-42kb.webp"
+      alt="Keyboard Letters"
+    />
+
+    <script src="script.js"></script>
+  </body>
+</html>
